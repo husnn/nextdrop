@@ -1,0 +1,87 @@
+$background-color: #0E070E;
+$primary-color: #D81E5B;
+$accent-color: #F0544F;
+$color-opal: #C6D8D3;
+$color-papaya-whip: #FDF0D5;
+
+body {
+  overflow-y: hidden;
+}
+
+#container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.modal-wrapper, .modal-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.modal-overlay {
+  background-color: $background-color;
+  opacity: 0.5;
+}
+
+.modal {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: $background-color;
+  z-index: 100;
+}
+
+.form-two-cols {
+  display: grid;
+  grid-template-columns: minmax(auto, 50%) minmax(auto, 50%);
+  grid-column-gap: 16px;
+}
+
+.form-single-col {
+  display: grid;
+  grid-auto-rows: 1fr;
+  align-items: end;
+}
+
+.form-input {
+  width: 100%;
+}
+
+.table-row-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.table-row-actions > * {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.table-row-actions > *:hover {
+  opacity: 0.7;
+}
+
+.table-row-actions img {
+  filter: invert(95%) sepia(18%) saturate(168%) hue-rotate(96deg) brightness(91%) contrast(85%);
+}
+
+.fab-wrapper {
+  position: absolute;
+  bottom: 48px;
+  right: 48px;
+}
+
+.form-input-label {
+  display: block;
+  margin-bottom: 8px;
+}

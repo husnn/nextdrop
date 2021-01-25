@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "commonjs",
+    "allowJs": true,
+    "checkJs": true,
+    "jsx": "react",
+    "outDir": "./dist",
+    "strict": true,
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "paths": {
+      "@core/*": ["core/*"],
+      "@infrastructure/*": ["infrastructure/*"],
+      "@platforms/*": ["platforms/*"]
+    },
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*"]
+}
