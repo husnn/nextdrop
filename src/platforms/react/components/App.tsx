@@ -5,6 +5,7 @@ import './App.scss';
 
 import Swarm from './Swarm';
 import Profiles from './Profiles';
+import PaymentCards from './PaymentCards';
 
 const { Title } = Typography;
 const { TabPane } = Tabs;
@@ -21,7 +22,7 @@ export default class App extends React.Component<IProps, IState> {
     return(
       <div id="app">
         <div id="container">
-          <Title style={{ paddingTop: 48 }}>NextDrop</Title>
+          <Title>NextDrop</Title>
           <Tabs style={{ marginTop: 32 }} defaultActiveKey="swarm">
             <TabPane tab="Swarm" key="swarm">
               <Swarm />
@@ -30,7 +31,7 @@ export default class App extends React.Component<IProps, IState> {
               <Profiles />
             </TabPane>
             <TabPane tab="Cards" key="paymentCards">
-              
+              <PaymentCards />
             </TabPane>
           </Tabs>
           </div>

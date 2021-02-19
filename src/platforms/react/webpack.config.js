@@ -10,7 +10,12 @@ module.exports = {
       "@core": path.resolve(__dirname, '../../core/'),
       "@infrastructure": path.resolve(__dirname, '../../infrastructure/'),
       "@platforms": path.resolve(__dirname, '../../platforms/')
-    }
+    },
+    mainFields: ['main', 'browser']
+  },
+  externals: {
+    bufferutil: "bufferutil",
+    "utf-8-validate": "utf-8-validate"
   },
   output: {
     path: path.resolve(__dirname, '../../../dist'),

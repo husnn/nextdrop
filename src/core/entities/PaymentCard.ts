@@ -1,23 +1,20 @@
-export type IPaymentCard = {
-  id?: string;
-  number: string;
-  expMonth: number;
-  expYear: number;
-  securityCode: number;
-}
+import IPaymentCard from './interfaces/IPaymentCard';
+import Profile from './Profile';
 
 export default class PaymentCard implements IPaymentCard {
-  id?: string;
+  id: string;
+  profile: Profile;
   number: string;
   expMonth: number;
   expYear: number;
   securityCode: number;
 
-  constructor(data: IPaymentCard) {
-    this.id = data.id;
-    this.number = data.number;
-    this.expMonth = data.expMonth;
-    this.expYear = data.expYear;
-    this.securityCode = data.securityCode;
+  constructor(props: IPaymentCard) {
+    this.id = props.id;
+    this.profile = props.profile;
+    this.number = props.number;
+    this.expMonth = props.expMonth;
+    this.expYear = props.expYear;
+    this.securityCode = props.securityCode;
   }
 }

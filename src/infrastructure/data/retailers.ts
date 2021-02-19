@@ -1,26 +1,26 @@
 import Retailer from "@core/entities/Retailer";
 
 const retailers: Retailer[] = [
+  // {
+  //   id: 'argos',
+  //   name: 'Argos',
+  //   homeUrl: ''
+  // },
   {
-    id: '1',
-    name: 'Argos',
-    homeUrl: ''
-  },
-  {
-    id: '2',
+    id: 'currys',
     name: 'Currys',
-    homeUrl: ''
+    homeUrl: 'https://www.currys.co.uk/gbuk/index.html'
   },
-  {
-    id: '3',
-    name: 'John Lewis',
-    homeUrl: ''
-  },
-  {
-    id: '4',
-    name: 'Smyths',
-    homeUrl: ''
-  }
+  // {
+  //   id: 'jlewis',
+  //   name: 'John Lewis',
+  //   homeUrl: ''
+  // },
+  // {
+  //   id: 'smyths',
+  //   name: 'Smyths',
+  //   homeUrl: ''
+  // }
 ];
 
 export default retailers;

@@ -1,17 +1,13 @@
-export type IRetailer = {
-  id: string;
-  name: string;
-  homeUrl: string;
-}
+import IRetailer from './interfaces/IRetailer';
 
 export default class Retailer implements IRetailer {
   id: string;
   name: string;
   homeUrl: string;
 
-  constructor(data: IRetailer) {
-    this.id = data.id;
-    this.name = data.name;
-    this.homeUrl = data.homeUrl;
+  constructor(props: IRetailer) {
+    this.id = props.id;
+    this.name = props.name;
+    this.homeUrl = props.homeUrl;
   }
 }

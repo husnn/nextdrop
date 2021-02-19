@@ -1,5 +1,8 @@
 import Bot from '@core/entities/Bot';
-import IRead from './IRead';
-import IWrite from './IWrite';
 
-export default interface IBotRepository extends IRead<Bot>, IWrite<Bot> {}
+export default interface IBotRepository {
+  create(data: any): Promise<void>;
+  getAll(): Promise<Bot[]>;
+  update(bot: Bot): Promise<Bot>;
+  remove(id: string): Promise<void>;
+}

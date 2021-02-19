@@ -3,7 +3,7 @@ import { app, BrowserWindow, screen, Menu } from 'electron';
 
 const DEFAULT_WINDOW_SIZE = { width: 900, height: 600 };
 
-// Menu.setApplicationMenu(null);
+if (process.env.NODE_ENV === 'production') Menu.setApplicationMenu(null);
 
 const createWindow = (width?: number, height?: number) => {
   return new BrowserWindow({
@@ -15,11 +15,11 @@ const createWindow = (width?: number, height?: number) => {
   });
 }
 
-app.on('ready', () => {
+app.on('ready', () => {  
   let { width, height } = screen.getPrimaryDisplay().workAreaSize;
 
   width = Math.max(width * 0.5, DEFAULT_WINDOW_SIZE.width);
-  height = Math.max(height * 0.5, DEFAULT_WINDOW_SIZE.height);
+  height = Math.max(height * 0.6, DEFAULT_WINDOW_SIZE.height);
 
   const window = createWindow(width, height);
 

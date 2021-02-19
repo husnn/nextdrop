@@ -4,17 +4,14 @@ $accent-color: #F0544F;
 $color-opal: #C6D8D3;
 $color-papaya-whip: #FDF0D5;
 
-body {
-  overflow-y: hidden;
-}
-
 #container {
   width: 90%;
   margin: 0 auto;
+  padding: 48px 0;
 }
 
 .modal-wrapper, .modal-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -40,9 +37,41 @@ body {
   z-index: 100;
 }
 
+.modal-slide--up {
+  animation: slide-up 0.2s;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translate(0, 100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.modal-slide--down {
+  animation: slide-down 0.2s;
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 100%);
+  }
+}
+
 .form-two-cols {
   display: grid;
   grid-template-columns: minmax(auto, 50%) minmax(auto, 50%);
+  grid-column-gap: 16px;
+}
+
+.form-three-cols {
+  display: grid;
+  grid-template-columns: minmax(auto, 50%) minmax(auto, 50%) minmax(auto, 50%);
   grid-column-gap: 16px;
 }
 
@@ -56,10 +85,31 @@ body {
   width: 100%;
 }
 
+.table-info {
+  width: 100%;
+  padding: 16px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.table-info__counters {
+  display: flex;
+  gap: 16px;
+}
+
+.table-row--running {
+  background-color: $primary-color;
+}
+
+.table-row--paused {
+  background-color: $background-color;
+}
+
 .table-row-actions {
   display: flex;
   flex-direction: row;
-  gap: 16px;
+  gap: 32px;
 }
 
 .table-row-actions > * {
@@ -76,7 +126,7 @@ body {
 }
 
 .fab-wrapper {
-  position: absolute;
+  position: fixed;
   bottom: 48px;
   right: 48px;
 }
